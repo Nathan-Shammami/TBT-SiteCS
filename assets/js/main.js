@@ -1,8 +1,12 @@
+import { saveEmail, encrypt } from "./db.js"
+
+
 /*
 	Eventually by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
 
 (function() {
 
@@ -162,6 +166,8 @@
 						$submit.disabled = false;
 						return;
 					}
+					saveEmail(email);
+
 					// Process form.
 					// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
 					// but there's enough here to piece together a working AJAX submission call that does.
