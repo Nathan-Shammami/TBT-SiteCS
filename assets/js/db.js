@@ -71,7 +71,7 @@ async function saveEmail(email) {
     const { data, error } = await supabase
         .from("email")
         .insert([{ email_address: encrypted, iv: iv, created_at: new Date()}]);
-
+        console.log("email added!")
     if (error) {
         console.error("Error saving email:", error);
     } else {
